@@ -69,7 +69,7 @@ const App = () => {
   useEffect(() => {
     const audio = audioRef.current;
     if (audio) {
-      audio.volume = 0.3; // 30% volume for cinematic background ambiance
+      audio.volume = 0.2; // 20% volume for cinematic background ambiance
 
       // Attempt to play automatically
       const tryPlay = () => {
@@ -141,7 +141,7 @@ const App = () => {
       org: "Green University of Bangladesh",
       date: "Jan 2025 - Jan 2029",
       desc: "Currently in 5th Semester • CGPA: 3.77",
-      details: "Pursuing Bachelor's degree in CSE. Actively participating in various tech clubs and logistics operations.",
+      details: "Pursuing Bachelor's degree in CSE. Actively volunteering in clubs, participating in various tech and logistics operations.",
       image: "/certificates/gub-academic.jpg"
     },
     {
@@ -175,8 +175,8 @@ const App = () => {
       title: "Sales Associate",
       org: "BYSL Global Technology Group (ILLIYEEN)",
       date: "Mar 2024 - Apr 2024",
-      desc: "Ensured high-end customer service and maintained stock/inventory.",
-      details: "Managed stock and inventory at the Dhaka outlet. Focused on maximizing customer satisfaction and maintaining a customer-friendly environment.",
+      desc: "Ensured high-end customer service and maintained inventory. Served 300+ happy customers in 560+ hours",
+      details: "Participated in office training sessions. Managed stock and inventory at the display center. Focused on maximizing customer satisfaction and maintaining a customer-friendly environment.",
       image: "/certificates/bysl.jpg"
     },
     {
@@ -309,7 +309,7 @@ const App = () => {
       <SEO />
       
       {/* Background Audio Element (Hidden & Autoplay Enabled) */}
-      <audio ref={audioRef} src="src\BGM\BGM_1.mp3" autoPlay loop preload="auto" />
+      <audio ref={audioRef} src="src\BGM\BGM_2.mp3" autoPlay loop preload="auto" />
 
       {/* Modern Floating Navbar */}
       <nav 
@@ -433,7 +433,7 @@ const App = () => {
                 <div className="p-8 bg-white dark:bg-gray-950 border border-slate-200 dark:border-gray-800 rounded-3xl relative overflow-hidden group hover:border-rose-400 dark:hover:border-rose-500/50 transition-all shadow-sm hover:shadow-md flex flex-col h-full">
                   <div className="absolute top-0 right-0 w-32 h-32 bg-rose-50 dark:bg-rose-500/5 rounded-bl-[100px] -z-10 group-hover:bg-rose-100 dark:group-hover:bg-rose-500/10 transition-colors"></div>
                   <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">{item.title}</h3>
-                  <p className="text-rose-600 dark:text-rose-400 font-bold block mb-5">{item.org} • <span className="text-slate-500 dark:text-gray-400">{item.date}</span></p>
+                  <p className="text-rose-600 dark:text-green-400 font-bold block mb-5">{item.org} • <span className="text-slate-500 dark:text-gray-400">{item.date}</span></p>
                   <div className="inline-block px-4 py-1.5 bg-slate-50 dark:bg-gray-900 rounded-full text-sm text-slate-700 dark:text-gray-300 font-bold border border-slate-200 dark:border-gray-800 mb-6 w-fit">
                     {item.desc}
                   </div>
