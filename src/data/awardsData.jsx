@@ -2,14 +2,6 @@ import { getImage } from '../Shared';
 
 export const awardsData = [
   { 
-    title: "Science Olympiad Winner", 
-    org: "District Commissioner's Office", 
-    url: "", 
-    color: "text-emerald-500", bg: "bg-emerald-50 dark:bg-emerald-500/10", border: "border-emerald-200 dark:border-emerald-500/20",
-    details: "Secured top position in the District Science Olympiad, showcasing strong analytical and problem-solving skills.",
-    image: getImage('science-olympiad.jpg')
-  },
-  { 
     title: "Vice Chancellor's Award", 
     org: "Green University of Bangladesh", 
     url: "", 
@@ -17,6 +9,25 @@ export const awardsData = [
     details: "Awarded by the Vice Chancellor for exceptional academic performance and maintaining a top-tier CGPA.",
     image: getImage('vc-award.jpg')
   },
+
+  { 
+    title: "IEE Olympiad GUB Champion", 
+    org: "IEEE GUB Student Branch", 
+    url: "", 
+    color: "text-green-700 dark:text-green-600", bg: "bg-green-50 dark:bg-green-500/10", border: "border-green-200 dark:border-green-500/20",
+    details: "Awarded the certificate for securing the 2nd position in junior level during IEEE Day 2025@GUB celebration.",
+    image: getImage('IEEE_Day_Olympiad.png'),
+  },
+
+  { 
+    title: "Science Olympiad Winner", 
+    org: "District Commissioner's Office", 
+    url: "", 
+    color: "text-emerald-500", bg: "bg-emerald-50 dark:bg-emerald-500/10", border: "border-emerald-200 dark:border-emerald-500/20",
+    details: "Secured top position in the District Science Olympiad, showcasing strong analytical and problem-solving skills.",
+    image: getImage('science-olympiad.jpg')
+  },
+
   { 
     title: "Best Performer", 
     org: "Hult Prize, Green University", 

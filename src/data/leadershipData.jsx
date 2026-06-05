@@ -21,7 +21,7 @@ export const leadershipData = [
     url: "https://www.facebook.com/hultprizegub", // <--- ২. Hult Prize এর ফেসবুক লিংক (আপনার আসল লিংকটি এখানে বসান)
     items: ["Support execution of venue setup and registration.", "Handle logistics data and technical operations.", "Managed 110 participants in the grand finale."],
     details: "Maintaining an organized approach to meet logistics deadlines. Handled 110 participants directly during the Grand Finale operations.",
-    image: "src/Images/Hult_Certificate.png"
+    image: getImage("Hult_Certificate.png"),
   },
   {
     title: "Volunteer",
@@ -31,7 +31,7 @@ export const leadershipData = [
     url: "https://www.facebook.com/ieeesbgub", // <--- ৩. IEEE এর ফেসবুক লিংক (আপনার আসল লিংকটি এখানে বসান)
     items: ["Website Development & Public Relations Team.", "Logistic Support & Event Management.", "Report writing based on tasks."],
     details: "Managed event participants ranging from 60-82. Contributed to logistics distribution, membership development, and website development teams.",
-    image: "src/Images/Abdullah_Galib_IEEE.png"
+    image: getImage("Abdullah_Galib_IEEE.png"),
   },
 
   {
@@ -42,7 +42,7 @@ export const leadershipData = [
     url: "", // <--- লিংক না থাকলে ফাঁকা রাখবেন অথবা এই লাইনটি মুছে দেবেন
     items: ["Responsible for campus outreach.", "Organized seminars and workshops.", "Bridged communication gaps."],
     details: "Directed campus-focused promotional efforts, reaching 60 students and raising awareness of bioinformatics on campus.",
-    image: "src/Images/DoB_Certificate.jpeg",
+    image: getImage("DoB_Certificate.jpeg"),
   },
 
   {
@@ -53,7 +53,7 @@ export const leadershipData = [
     url: "https://cybernauts.nsucec.com/",
     items: ["Promoted all the events on campus.", "Stablished partnership with three clubs", "Registered 30+ participants."],
     details: "Acted as an ambassador for the AI Community at BUBT, spreading awareness about AI technologies and community programs.",
-    image: "src/Images/Campus_Leader.jpg"
+    image: getImage("Campus_Leader.jpg"),
   },
 
   {
@@ -64,7 +64,7 @@ export const leadershipData = [
     url: "https://www.facebook.com/ieeeiubat", // <--- (ভবিষ্যতের জন্য: এখানে চাইলে লিংক দিতে পারেন)
     items: ["Promoted symposium across campus.", "Acted as communication bridge for organizing committee."],
     details: "Represented IEEE IUBAT for SympSIST 2025. Encouraged student participation by explaining event objectives and registration procedures.",
-    image: "src/Images/IEEE_IUBAT_CA.jpeg"
+    image: getImage("IEEE_IUBAT_CA.jpeg")
   },
   
   {
@@ -75,6 +75,6 @@ export const leadershipData = [
     url: "", // <--- লিংক না থাকলে ফাঁকা রাখবেন অথবা এই লাইনটি মুছে দেবেন
     items: ["Promoted AI initiatives on campus.", "Assisted in community growth."],
     details: "Acted as an ambassador for the AI Community at BUBT, spreading awareness about AI technologies and community programs.",
-    image: "src/Images/BUBT_AI_COMMUNITY.png"
+    image: getImage("BUBT_AI_COMMUNITY.png")
   }
 ];
