@@ -9,7 +9,7 @@ export const volunteeringData = [
     desc: "Supported global outreach reaching 100+ individuals.",
     impact: "GLOBAL OUTREACH",
     details: "Supported outreach and engagement activities, successfully connecting with over 100 individuals worldwide to raise awareness and participation.",
-    image: getImage('unfpa.jpg')
+    image: getImage('Palestine_Marathon.jpeg')
   },
   {
     title: "Campus Team Member",
