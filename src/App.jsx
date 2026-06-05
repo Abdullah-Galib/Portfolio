@@ -8,39 +8,12 @@ import {
   Menu, Clock, Volume2, VolumeX, Code
 } from 'lucide-react'; 
 
-// --- Custom Typewriter Hook for Dynamic Name/Title ---
-const useTypewriter = (words, typingSpeed = 100, deletingSpeed = 50, pauseTime = 2000) => {
-  const [text, setText] = useState('');
-  const [wordIndex, setWordIndex] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false);
-
-  useEffect(() => {
-    const currentWord = words[wordIndex];
-    const timeout = setTimeout(() => {
-      if (!isDeleting) {
-        setText(currentWord.substring(0, text.length + 1));
-        if (text.length === currentWord.length) {
-          setTimeout(() => setIsDeleting(true), pauseTime);
-        }
-      } else {
-        setText(currentWord.substring(0, text.length - 1));
-        if (text.length === 0) {
-          setIsDeleting(false);
-          setWordIndex((prev) => (prev + 1) % words.length);
-        }
-      }
-    }, isDeleting ? deletingSpeed : typingSpeed);
-
-    return () => clearTimeout(timeout);
-  }, [text, isDeleting, wordIndex, words, typingSpeed, deletingSpeed, pauseTime]);
-
-  return text;
-};
+import GalibPhoto from './Images/Galib.png';
 
 // --- 100% SEO Optimization Component ---
 const SEO = () => {
   useEffect(() => {
-    document.title = "Abdullah Md. Galib | Supply Chain & Logistics Professional | Campus Ambassador | CSE Undergraduate  | Green University of Bangladesh";
+    document.title = "Abdullah Md. Galib | Supply Chain & Logistics Professional | Campus Ambassador | CSE Undergraduate | Green University of Bangladesh";
     document.documentElement.lang = 'en';
     
     const setMetaTag = (name, content, isProperty = false) => {
@@ -101,6 +74,35 @@ const FadeIn = ({ children, delay = 0, className = "" }) => {
   );
 };
 
+// --- Custom Typewriter Hook ---
+const useTypewriter = (words, typingSpeed = 100, deletingSpeed = 50, pauseTime = 2000) => {
+  const [text, setText] = useState('');
+  const [wordIndex, setWordIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    const currentWord = words[wordIndex];
+    const timeout = setTimeout(() => {
+      if (!isDeleting) {
+        setText(currentWord.substring(0, text.length + 1));
+        if (text.length === currentWord.length) {
+          setTimeout(() => setIsDeleting(true), pauseTime);
+        }
+      } else {
+        setText(currentWord.substring(0, text.length - 1));
+        if (text.length === 0) {
+          setIsDeleting(false);
+          setWordIndex((prev) => (prev + 1) % words.length);
+        }
+      }
+    }, isDeleting ? deletingSpeed : typingSpeed);
+
+    return () => clearTimeout(timeout);
+  }, [text, isDeleting, wordIndex, words, typingSpeed, deletingSpeed, pauseTime]);
+
+  return text;
+};
+
 // --- Interactive Water Fill Heading Component ---
 const InteractiveHeading = ({ icon: Icon, title, highlight, color = "rose" }) => {
   const [isFilling, setIsFilling] = useState(false);
@@ -158,18 +160,18 @@ const App = () => {
 
   // --- Dynamic Typewriter Roles ---
   const roles = [
-    "CSE Undergraduate.",
+    "Aspiring Supply Chain Professional.",
     "Campus Ambassador.",
-    "Millennium Fellow.",
-    "Community Volunteer"
+    "CSE Undergraduate.",
+    "Millennium Fellow."
   ];
   const dynamicRole = useTypewriter(roles);
 
-  // --- Fixed & Reliable BGM Autoplay Logic ---
+  // --- Fixed & Reliable BGM Autoplay Logic (With Correct Path) ---
   useEffect(() => {
     const audio = document.getElementById('bgMusic');
     if (!audio) return;
-    audio.volume = 0.4;
+    audio.volume = 0.3; // Set a reasonable default volume
 
     const startMusic = () => {
       if (audio.paused) {
@@ -290,7 +292,7 @@ const App = () => {
       url: "https://crits.green.edu.bd/",
       image: "/certificates/crits.jpg",
       customSVG: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" className="w-10 h-10 text-green-600 dark:text-green-500" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" className="w-10 h-10 text-green-700 dark:text-green-600" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
           <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
           <circle cx="12" cy="12" r="9" strokeDasharray="4 4" />
         </svg>
@@ -322,29 +324,32 @@ const App = () => {
       title: "Joint Information Secretary",
       org: "Green University Computer Club (GUCC)",
       date: "Apr 2026 - Present",
-      icon: <Megaphone className="w-8 h-8 text-green-600 dark:text-green-500 mb-4" />,
+      icon: <Megaphone className="w-8 h-8 text-emerald-600 dark:text-emerald-500 mb-4" />,
       url: "https://gucc.green.edu.bd/",
       items: ["Serve as a central hub for organizational communication.", "Draft professional captions for social media.", "Coordinate and lead Class Representatives."],
       details: "Supported the Information Secretary in strategic planning and operational execution. Handled departmental orientation for nearly 200 participants.",
-      image: "/certificates/gucc.jpg"
+      image: "/certificates/gucc.jpg",
+      isGUB: true
     },
     {
       title: "Associate of Logistics",
       org: "Hult Prize at GUB",
       date: "Nov 2025 - Present",
-      icon: <Zap className="w-8 h-8 text-green-600 dark:text-green-500 mb-4" />,
+      icon: <Zap className="w-8 h-8 text-emerald-600 dark:text-emerald-500 mb-4" />,
       items: ["Support execution of venue setup and registration.", "Handle logistics data and technical operations.", "Managed 110 participants in the grand finale."],
       details: "Maintaining an organized approach to meet logistics deadlines. Handled 110 participants directly during the Grand Finale operations.",
-      image: "/certificates/hult.jpg"
+      image: "/certificates/hult.jpg",
+      isGUB: true
     },
     {
       title: "Volunteer",
       org: "IEEE Student Branch GUB",
       date: "Jun 2025 - Present",
-      icon: <Users className="w-8 h-8 text-green-600 dark:text-green-500 mb-4" />,
+      icon: <Users className="w-8 h-8 text-emerald-600 dark:text-emerald-500 mb-4" />,
       items: ["Website Development & Public Relations Team.", "Logistic Support & Event Management.", "Report writing based on tasks."],
       details: "Managed event participants ranging from 60-82. Contributed to logistics distribution, membership development, and website development teams.",
-      image: "/certificates/ieee-gub.jpg"
+      image: "/certificates/ieee-gub.jpg",
+      isGUB: true
     },
     {
       title: "Campus Ambassador",
@@ -353,7 +358,8 @@ const App = () => {
       icon: <MapPin className="w-8 h-8 text-orange-500 mb-4" />,
       items: ["Promoted symposium across campus.", "Acted as communication bridge for organizing committee."],
       details: "Represented IEEE IUBAT for SympSIST 2025. Encouraged student participation by explaining event objectives and registration procedures.",
-      image: "/certificates/ieee-iubat.jpg"
+      image: "/certificates/ieee-iubat.jpg",
+      isGUB: false
     },
     {
       title: "Campus Coordinator",
@@ -362,7 +368,8 @@ const App = () => {
       icon: <Globe className="w-8 h-8 text-blue-500 mb-4" />,
       items: ["Responsible for campus outreach.", "Organized seminars and workshops.", "Bridged communication gaps."],
       details: "Directed campus-focused promotional efforts, reaching 60 students and raising awareness of bioinformatics on campus.",
-      image: "/certificates/dawn.jpg"
+      image: "/certificates/dawn.jpg",
+      isGUB: false
     },
     {
       title: "Campus Ambassador",
@@ -371,7 +378,8 @@ const App = () => {
       icon: <Briefcase className="w-8 h-8 text-purple-500 mb-4" />,
       items: ["Promoted AI initiatives on campus.", "Assisted in community growth."],
       details: "Acted as an ambassador for the AI Community at BUBT, spreading awareness about AI technologies and community programs.",
-      image: "/certificates/bubt.jpg"
+      image: "/certificates/bubt.jpg",
+      isGUB: false
     }
   ];
 
@@ -379,9 +387,9 @@ const App = () => {
     {
       title: "Millennium Fellow (Class of 2025)",
       org: "MCN (UNAI)",
-      date: "Aug 2025 - 2026",
+      date: "Aug 2025 - Present",
       desc: "Founded project SustainaBite focused on food distribution & sustainability.",
-      impact: "100+ Reached",
+      impact: "100+ REACHED",
       details: "Led the SustainaBite project, engaging 100+ individuals through social betterment initiatives. Built a digital platform empowering farmers to upload harvest details.",
       image: "/certificates/millennium.jpg"
     }
@@ -393,7 +401,7 @@ const App = () => {
       org: "UNFPA Palestine Virtual Marathon",
       date: "Mar 2026 - Apr 2026",
       desc: "Supported global outreach reaching 100+ individuals.",
-      impact: "Global Outreach",
+      impact: "GLOBAL OUTREACH",
       details: "Supported outreach and engagement activities, successfully connecting with over 100 individuals worldwide to raise awareness and participation.",
       image: "/certificates/unfpa.jpg"
     },
@@ -402,7 +410,7 @@ const App = () => {
       org: "Excellence Bangladesh",
       date: "Mar 2026 - Present",
       desc: "Contributing to professional growth and network expansion on campus.",
-      impact: "Networking",
+      impact: "NETWORKING",
       details: "Engaging in various skill development and networking events to build a strong professional community among university students.",
       image: "/certificates/excellence.jpg"
     }
@@ -497,8 +505,8 @@ const App = () => {
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9IjAuMDUiLz4KPC9zdmc+')] opacity-10 dark:opacity-30 mix-blend-screen"></div>
       </div>
       
-      {/* Background Audio Element */}
-      <audio id="bgMusic" src="/BGM_2.mp3" loop preload="auto" />
+      {/* Background Audio Element - Path Corrected for Vercel */}
+      <audio id="bgMusic" src="/BGM/BGM_3.mp3" loop preload="auto" />
 
       {/* --- Floating Audio Toggle Button --- */}
       <button 
@@ -562,7 +570,7 @@ const App = () => {
             </button>
             <a href="https://galib.vercel.app" className="flex items-center transition-transform hover:scale-105 group">
               <div className="w-10 h-10 md:w-12 md:h-12 rounded-full border-2 border-slate-300 dark:border-gray-700 overflow-hidden group-hover:border-rose-500 transition-colors shadow-sm bg-white">
-                <img src="/Galib.png" alt="Galib" className="w-full h-full object-cover" onError={(e) => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'flex'; }} />
+                <img src={GalibPhoto} alt="Galib" className="w-full h-full object-cover" onError={(e) => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'flex'; }} />
                 <div className="hidden w-full h-full bg-rose-600 text-white items-center justify-center font-bold text-sm">AG</div>
               </div>
             </a>
@@ -609,7 +617,7 @@ const App = () => {
             
             <FadeIn delay={100}>
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight text-slate-900 dark:text-white mb-4 leading-[1.1]">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 via-orange-400 to-rose-500 animate-gradient">ABDULLAH MD GALIB</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 via-orange-400 to-rose-500 animate-gradient">ABDULLAH MD GALIB</span>
               </h1>
             </FadeIn>
             
@@ -1006,6 +1014,7 @@ const App = () => {
             </FadeIn>
 
             <FadeIn delay={200}>
+              {/* Social Links (GitHub, LinkedIn, Facebook) */}
               <div className="flex flex-wrap justify-center gap-4">
                 <a href="https://github.com/Abdullah-Galib" target="_blank" rel="noreferrer" aria-label="GitHub" className="flex items-center px-6 py-3.5 bg-slate-900 dark:bg-white shadow-md rounded-full text-white dark:text-slate-900 font-bold transition-all hover:scale-105">
                   <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clipRule="evenodd" /></svg>
