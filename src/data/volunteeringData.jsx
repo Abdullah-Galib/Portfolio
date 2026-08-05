@@ -12,6 +12,16 @@ export const volunteeringData = [
     image: getImage('Palestine_Marathon.jpeg')
   },
   {
+    title: "HR Summit 2026",
+    org: "Center for Career Development, GUB",
+    url: "", 
+    date: "1 August 2026",
+    desc: "Supported IT Operations and Volunteer Coordination for the HR Summit 2026.",
+    impact: "Successful Event Execution",
+    details: "Supported IT operations and volunteer coordination, successfully executed 20+ Chief Human Resource Officers in the panel discussion, ensuring smooth event flow and participant engagement.",
+    image: getImage('N/A')
+  },
+  {
     title: "Campus Team Member",
     org: "Excellence Bangladesh",
     url: "", 

@@ -14,6 +14,16 @@ export const leadershipData = [
     image: getImage('gucc.jpg') 
   },
   {
+    title: "Campus Icon",
+    org: "Lotto Sports Bangladesh",
+    date: "August 2026 - Present",
+    icon: <Users className="w-8 h-8 text-emerald-600 dark:text-emerald-500 mb-4" />,
+    url: " ", // <--- ৩. IEEE এর ফেসবুক লিংক (আপনার আসল লিংকটি এখানে বসান)
+    items: ["Supply Chain", "Workshop.", "Mentorship"],
+    details: "Will be available later.",
+    image: getImage("N/A"),
+  },
+  {
     title: "Associate of Logistics",
     org: "Hult Prize at GUB",
     date: "Nov 2025 - Present",
