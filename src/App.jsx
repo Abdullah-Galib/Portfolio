@@ -28,7 +28,7 @@ import { skillsData } from './data/skillsData';
 // --- CONFIGURABLE LINKS ---
 const GOOGLE_CALENDAR_APPOINTMENT_URL = "https://calendar.google.com/calendar/u/0/r/appointmentschedule";
 // Google Drive Preview Link (যেখানে Download সেটিংস বন্ধ করা আছে):
-const CV_FILE_URL = "https://drive.google.com/file/d/YOUR_DRIVE_FILE_ID/preview"; 
+const CV_FILE_URL = "https://drive.google.com/file/d/1yIwDHC9zXmXy6tjN1UShwC2Vds6OMeOQ/preview"; 
 
 const SEO = () => {
   useEffect(() => {

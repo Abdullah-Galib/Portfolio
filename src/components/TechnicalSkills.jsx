@@ -9,22 +9,26 @@ const TechnicalSkills = () => {
   return (
     <section id="skills" className="py-24 bg-slate-100/90 dark:bg-gray-900/40 backdrop-blur-md border-y border-slate-200/60 dark:border-gray-800/60 transition-colors duration-500">
       <div className="max-w-7xl mx-auto px-6">
-        <FadeIn>
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
-            <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 text-xs font-bold uppercase tracking-wider mb-4 border border-blue-200 dark:border-blue-800">
-                <ShieldCheck className="w-3.5 h-3.5" /> Microsoft Azure & Defender Inspired UI
+     <FadeIn>
+          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-12">
+            <div className="flex items-center gap-4">
+              {/* Microsoft Fluent Icon */}
+              <div className="relative">
+                <div className="absolute inset-0 rounded-2xl bg-blue-500/20 blur-xl animate-pulse"></div>
+                <div className="relative w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-600 via-sky-500 to-cyan-400 flex items-center justify-center shadow-md border border-blue-400/20">
+                  <Cpu className="w-6 h-6 text-white" />
+                </div>
               </div>
-              <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white">
-                Technical <span className="text-blue-600 dark:text-blue-500">Skills & Profiles</span>
-              </h2>
-              <p className="text-slate-600 dark:text-gray-400 mt-2 text-base md:text-lg font-medium">
-                Real-time proficiency posture, algorithm metrics, and dedicated language project segments.
-              </p>
-            </div>
-            <div className="mt-4 md:mt-0 text-xs font-bold text-slate-500 dark:text-gray-400 bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 px-4 py-2 rounded-xl shadow-sm flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-              All Systems Operational • Score Last Calculated Today
+
+              {/* Consistent Heading */}
+              <div>
+                <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white leading-tight">
+                  Technical{" "}
+                  <span className="bg-gradient-to-r from-blue-600 via-sky-500 to-cyan-400 bg-clip-text text-transparent">
+                    Skills & Profiles
+                  </span>
+                </h2>
+              </div>
             </div>
           </div>
         </FadeIn>
@@ -121,7 +125,7 @@ const TechnicalSkills = () => {
                 {/* Defender Action Button -> Opens Profile Projects Modal */}
                 <button 
                   onClick={() => setActiveProfileModal(skill)}
-                  className="mt-auto w-full py-2.5 px-4 bg-slate-900 hover:bg-blue-600 dark:bg-white dark:hover:bg-blue-500 text-white dark:text-slate-900 hover:text-white dark:hover:text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all shadow-sm flex items-center justify-center gap-2 group/btn"
+                  className="mt-auto w-full py-2.5 px-4 bg-slate-999 hover:bg-blue-700 dark:bg-white dark:hover:bg-blue-800 text-white dark:text-slate-900 hover:text-white dark:hover:text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all shadow-sm flex items-center justify-center gap-2 group/btn"
                 >
                   <FolderGit2 className="w-4 h-4" />
                   <span>View Projects & Profile</span>
